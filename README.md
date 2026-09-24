@@ -51,14 +51,15 @@ Add 10 rows to `legs.csv`, one per member, then commit and push. Row format:
 | `submitter` | handle of the member who picked the leg |
 | `leg` | free text, e.g. `Bills -3.5` or `CMC over 89.5 scrim yds` |
 | `bet_type` | `game_line` or `prop` |
+| `odds` | American odds for the leg, e.g. `-110` or `+140` (optional) |
 | `result` | `W`, `L`, or `Push` |
 | `outcome` | optional free text, the actual result for the record |
 
 Example week:
 
 ```
-5,2025-10-05,David B.,Lucas,Bills -3.5,game_line,W,Bills won by 10
-5,2025-10-05,David B.,Ryan,Mahomes over 275.5 pass yds,prop,L,241 pass yds
+5,2025-10-05,David B.,Lucas,Bills -3.5,game_line,-110,W,Bills won by 10
+5,2025-10-05,David B.,Ryan,Mahomes over 275.5 pass yds,prop,+120,L,241 pass yds
 ...eight more rows...
 ```
 
@@ -66,6 +67,10 @@ Example week:
 
 - Hit rate excludes pushes: `W / (W + L)`.
 - A streak skips pushes rather than breaking on them.
+- Odds feed two things: the "if all hit" parlay payout on the weekly slate, and
+  the chalk-vs-longshots ranking, which averages each member's implied win
+  probability (odds converted to a percentage). Legs left without odds are
+  simply skipped in those two calculations.
 - Parlay result: a push voids that leg and the parlay plays on, so a week
   **Cashed** at zero losses, is a **Near miss** at exactly one loss, and
   **Missed** at two or more.

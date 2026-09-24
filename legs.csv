@@ -1,1 +1,11 @@
-week,date,funder,submitter,leg,bet_type,result,outcome
+week,date,funder,submitter,leg,bet_type,odds,result,outcome
+1,2026-09-13,Ryan,Ryan,Browns +8.5,game_line,-108,L,
+1,2026-09-13,Ryan,Robert,Eagles -5.5,game_line,-110,L,
+1,2026-09-13,Ryan,Jacob,Lions -6.5,game_line,-122,L,
+1,2026-09-13,Ryan,David S.,Steelers -5.5,game_line,-115,W,
+1,2026-09-13,Ryan,Lucas,Chase Brown anytime TD,prop,-130,W,
+1,2026-09-13,Ryan,David B.,Bears -3,game_line,-115,W,
+1,2026-09-13,Ryan,Adam,Cardinals +14.5,game_line,-235,W,
+1,2026-09-13,Ryan,Ben,Austin Simmons over 229.5 pass yds,prop,-115,W,
+1,2026-09-13,Ryan,Matt,Missouri ML,game_line,-205,W,
+1,2026-09-13,Ryan,EJ,Raiders ML,game_line,-180,W,

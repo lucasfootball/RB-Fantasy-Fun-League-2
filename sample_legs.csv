@@ -1,41 +1,41 @@
-week,date,funder,submitter,leg,bet_type,result,outcome
-1,2025-09-07,Adam,Lucas,Bills -3.5,game_line,W,Bills won by 10
-1,2025-09-07,Adam,Ryan,Chiefs/Ravens over 47.5,game_line,W,Total 52
-1,2025-09-07,Adam,David S.,Saquon Barkley over 79.5 rush yds,prop,W,94 rush yds
-1,2025-09-07,Adam,David B.,Cowboys ML,game_line,L,Cowboys lost
-1,2025-09-07,Adam,Ben,Tyreek Hill anytime TD,prop,W,1 TD
-1,2025-09-07,Adam,Jacob,Packers -6.5,game_line,L,Packers won by 3
-1,2025-09-07,Adam,Adam,Joe Burrow over 274.5 pass yds,prop,L,241 pass yds
-1,2025-09-07,Adam,Matt,Lions -1.5,game_line,W,Lions won by 7
-1,2025-09-07,Adam,Robert,Bijan Robinson over 4.5 receptions,prop,W,6 receptions
-1,2025-09-07,Adam,EJ,Eagles/Rams under 49.5,game_line,W,Total 44
-2,2025-09-14,Lucas,Lucas,Ravens -7.5,game_line,W,Ravens won by 14
-2,2025-09-14,Lucas,Ryan,Josh Allen over 1.5 pass TDs,prop,W,3 pass TDs
-2,2025-09-14,Lucas,David S.,49ers ML,game_line,W,49ers won
-2,2025-09-14,Lucas,David B.,Amon-Ra St. Brown over 6.5 receptions,prop,W,8 receptions
-2,2025-09-14,Lucas,Ben,Chargers/Broncos over 44.5,game_line,Push,Total 45 (voided line move recorded as push)
-2,2025-09-14,Lucas,Jacob,Derrick Henry anytime TD,prop,W,2 TDs
-2,2025-09-14,Lucas,Adam,Dolphins -2.5,game_line,W,Dolphins won by 6
-2,2025-09-14,Lucas,Matt,Patrick Mahomes over 259.5 pass yds,prop,W,301 pass yds
-2,2025-09-14,Lucas,Robert,Vikings ML,game_line,W,Vikings won
-2,2025-09-14,Lucas,EJ,Bengals -3.5,game_line,W,Bengals won by 9
-3,2025-09-21,Robert,Lucas,Jets/Patriots under 39.5,game_line,W,Total 34
-3,2025-09-21,Robert,Ryan,CeeDee Lamb over 84.5 rec yds,prop,W,112 rec yds
-3,2025-09-21,Robert,David S.,Packers -4.5,game_line,W,Packers won by 8
-3,2025-09-21,Robert,David B.,Jahmyr Gibbs anytime TD,prop,W,1 TD
-3,2025-09-21,Robert,Ben,Texans ML,game_line,W,Texans won
-3,2025-09-21,Robert,Jacob,Jalen Hurts over 44.5 rush yds,prop,W,51 rush yds
-3,2025-09-21,Robert,Adam,Bills -6.5,game_line,W,Bills won by 13
-3,2025-09-21,Robert,Matt,Chiefs/Falcons over 46.5,game_line,W,Total 49
-3,2025-09-21,Robert,Robert,Christian McCaffrey over 89.5 scrim yds,prop,W,120 scrim yds
-3,2025-09-21,Robert,EJ,Seahawks -1.5,game_line,L,Seahawks lost outright
-4,2025-09-28,David B.,Lucas,Cardinals +6.5,game_line,L,Lost by 10
-4,2025-09-28,David B.,Ryan,Ja'Marr Chase over 79.5 rec yds,prop,W,101 rec yds
-4,2025-09-28,David B.,David S.,Chargers ML,game_line,W,Chargers won
-4,2025-09-28,David B.,David B.,Travis Kelce over 4.5 receptions,prop,W,7 receptions
-4,2025-09-28,David B.,Ben,Rams -3.5,game_line,W,Rams won by 7
-4,2025-09-28,David B.,Jacob,Lamar Jackson over 39.5 rush yds,prop,W,66 rush yds
-4,2025-09-28,David B.,Adam,Broncos ML,game_line,L,Broncos lost
-4,2025-09-28,David B.,Matt,Cowboys/Giants over 45.5,game_line,W,Total 51
-4,2025-09-28,David B.,Robert,Breece Hall over 3.5 receptions,prop,W,5 receptions
-4,2025-09-28,David B.,EJ,Buccaneers -2.5,game_line,W,Bucs won by 6
+week,date,funder,submitter,leg,bet_type,odds,result,outcome
+1,2025-09-07,Adam,Lucas,Bills -3.5,game_line,-110,W,Bills won by 10
+1,2025-09-07,Adam,Ryan,Chiefs/Ravens over 47.5,game_line,-120,W,Total 52
+1,2025-09-07,Adam,David S.,Saquon Barkley over 79.5 rush yds,prop,-160,W,94 rush yds
+1,2025-09-07,Adam,David B.,Cowboys ML,game_line,-115,L,Cowboys lost
+1,2025-09-07,Adam,Ben,Tyreek Hill anytime TD,prop,-240,W,1 TD
+1,2025-09-07,Adam,Jacob,Packers -6.5,game_line,170,L,Packers won by 3
+1,2025-09-07,Adam,Adam,Joe Burrow over 274.5 pass yds,prop,100,L,241 pass yds
+1,2025-09-07,Adam,Matt,Lions -1.5,game_line,-130,W,Lions won by 7
+1,2025-09-07,Adam,Robert,Bijan Robinson over 4.5 receptions,prop,-140,W,6 receptions
+1,2025-09-07,Adam,EJ,Eagles/Rams under 49.5,game_line,150,W,Total 44
+2,2025-09-14,Lucas,Lucas,Ravens -7.5,game_line,-110,W,Ravens won by 14
+2,2025-09-14,Lucas,Ryan,Josh Allen over 1.5 pass TDs,prop,-120,W,3 pass TDs
+2,2025-09-14,Lucas,David S.,49ers ML,game_line,-160,W,49ers won
+2,2025-09-14,Lucas,David B.,Amon-Ra St. Brown over 6.5 receptions,prop,-115,W,8 receptions
+2,2025-09-14,Lucas,Ben,Chargers/Broncos over 44.5,game_line,-240,Push,Total 45 (voided line move recorded as push)
+2,2025-09-14,Lucas,Jacob,Derrick Henry anytime TD,prop,170,W,2 TDs
+2,2025-09-14,Lucas,Adam,Dolphins -2.5,game_line,100,W,Dolphins won by 6
+2,2025-09-14,Lucas,Matt,Patrick Mahomes over 259.5 pass yds,prop,-130,W,301 pass yds
+2,2025-09-14,Lucas,Robert,Vikings ML,game_line,-140,W,Vikings won
+2,2025-09-14,Lucas,EJ,Bengals -3.5,game_line,150,W,Bengals won by 9
+3,2025-09-21,Robert,Lucas,Jets/Patriots under 39.5,game_line,-110,W,Total 34
+3,2025-09-21,Robert,Ryan,CeeDee Lamb over 84.5 rec yds,prop,-120,W,112 rec yds
+3,2025-09-21,Robert,David S.,Packers -4.5,game_line,-160,W,Packers won by 8
+3,2025-09-21,Robert,David B.,Jahmyr Gibbs anytime TD,prop,-115,W,1 TD
+3,2025-09-21,Robert,Ben,Texans ML,game_line,-240,W,Texans won
+3,2025-09-21,Robert,Jacob,Jalen Hurts over 44.5 rush yds,prop,170,W,51 rush yds
+3,2025-09-21,Robert,Adam,Bills -6.5,game_line,100,W,Bills won by 13
+3,2025-09-21,Robert,Matt,Chiefs/Falcons over 46.5,game_line,-130,W,Total 49
+3,2025-09-21,Robert,Robert,Christian McCaffrey over 89.5 scrim yds,prop,-140,W,120 scrim yds
+3,2025-09-21,Robert,EJ,Seahawks -1.5,game_line,150,L,Seahawks lost outright
+4,2025-09-28,David B.,Lucas,Cardinals +6.5,game_line,-110,L,Lost by 10
+4,2025-09-28,David B.,Ryan,Ja'Marr Chase over 79.5 rec yds,prop,-120,W,101 rec yds
+4,2025-09-28,David B.,David S.,Chargers ML,game_line,-160,W,Chargers won
+4,2025-09-28,David B.,David B.,Travis Kelce over 4.5 receptions,prop,-115,W,7 receptions
+4,2025-09-28,David B.,Ben,Rams -3.5,game_line,-240,W,Rams won by 7
+4,2025-09-28,David B.,Jacob,Lamar Jackson over 39.5 rush yds,prop,170,W,66 rush yds
+4,2025-09-28,David B.,Adam,Broncos ML,game_line,100,L,Broncos lost
+4,2025-09-28,David B.,Matt,Cowboys/Giants over 45.5,game_line,-130,W,Total 51
+4,2025-09-28,David B.,Robert,Breece Hall over 3.5 receptions,prop,-140,W,5 receptions
+4,2025-09-28,David B.,EJ,Buccaneers -2.5,game_line,150,W,Bucs won by 6

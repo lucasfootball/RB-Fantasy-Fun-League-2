@@ -13,37 +13,37 @@ import streamlit as st
 import logic
 
 LEAGUE_NAME = "Loser's Parlay"
-SEASON_LABEL = "2025 season"
+SEASON_LABEL = "2026 season"
 
-WIN_GREEN = "#1E874B"
-LOSS_RED = "#C0392B"
-PUSH_AMBER = "#B8860B"
-NAVY = "#2B3A67"
+WIN_GREEN = "#2F855A"
+LOSS_RED = "#B23B3B"
+PUSH_AMBER = "#B7791F"
+NAVY = "#2F6F4F"  # turf-green accent (kept name for the bar-chart call)
 
 st.set_page_config(page_title=LEAGUE_NAME, page_icon="🏈", layout="wide")
 
 CSS = """
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
-html, body, [class*="css"], .stMarkdown, .stDataFrame { font-family: 'Inter', sans-serif; }
-h1, h2, h3, .hero-verdict, .stMetric label { font-family: 'Oswald', 'Inter', sans-serif; }
+html, body, [class*="css"], .stMarkdown, .stDataFrame { font-family: 'IBM Plex Sans', sans-serif; }
+h1, h2, h3, .hero-verdict, .section-title, .title-row .name, .stMetric label { font-family: 'Space Grotesk', 'IBM Plex Sans', sans-serif; }
 
 .title-row { display:flex; align-items:baseline; gap:.6rem; margin-bottom:.2rem; }
-.title-row .name { font-family:'Oswald',sans-serif; font-weight:700; font-size:2.1rem; letter-spacing:.5px; color:#14171C; }
-.title-row .season { color:#6B7280; font-size:1rem; font-weight:500; }
+.title-row .name { font-weight:500; font-size:2rem; letter-spacing:.2px; color:#1C1B19; }
+.title-row .season { color:#7a746a; font-size:1rem; font-weight:400; }
 
-.hero { border-radius:10px; padding:1.4rem 1.6rem; color:#fff; background:#2B3A67; margin:.4rem 0 1.2rem 0; border-left:10px solid #6B7280; }
-.hero.cashed { border-left-color:#1E874B; }
-.hero.near   { border-left-color:#B8860B; }
-.hero.missed { border-left-color:#C0392B; }
-.hero.empty  { border-left-color:#6B7280; background:#3A4257; }
-.hero-eyebrow { font-size:.85rem; letter-spacing:.12em; color:#C7CEE0; margin-bottom:.35rem; }
-.hero-verdict { font-size:2.5rem; line-height:1.05; font-weight:700; }
-.hero-sub { margin-top:.45rem; font-size:1rem; color:#E4E8F2; }
+.hero { border-radius:10px; padding:1.3rem 1.5rem; color:#1C1B19; background:#FFFFFF; margin:.4rem 0 1.2rem 0; border:0.5px solid #e2ddd0; border-left:8px solid #B4ADA0; }
+.hero.cashed { border-left-color:#2F855A; }
+.hero.near   { border-left-color:#B7791F; }
+.hero.missed { border-left-color:#B23B3B; }
+.hero.empty  { border-left-color:#B4ADA0; background:#F2EFE7; }
+.hero-eyebrow { font-size:.8rem; letter-spacing:.08em; color:#7a746a; margin-bottom:.35rem; }
+.hero-verdict { font-size:2.3rem; line-height:1.05; font-weight:500; }
+.hero-sub { margin-top:.45rem; font-size:1rem; color:#4b463f; }
 
-.section-title { font-family:'Oswald',sans-serif; font-weight:600; font-size:1.15rem; color:#14171C; margin:.8rem 0 .3rem 0; }
-.note { color:#6B7280; font-size:.85rem; }
+.section-title { font-weight:500; font-size:1.15rem; color:#1C1B19; margin:.8rem 0 .3rem 0; }
+.note { color:#7a746a; font-size:.85rem; }
 </style>
 """
 st.markdown(CSS, unsafe_allow_html=True)
@@ -169,13 +169,20 @@ if weeks:
         "Near miss": "Missed by 1 leg",
         "Missed": f"Missed by {wk['L']} legs",
     }[wk["status"]]
-    st.caption(f"{wk['date']} · funded by {wk['funder']} · {verdict}")
+    payout = ""
+    if wk["payout_10"] is not None:
+        price = logic.fmt_odds(wk["price_american"]) if wk["price_american"] else ""
+        note = "" if wk["legs_priced"] == len(wk["legs"]) else f" ({wk['legs_priced']} of {len(wk['legs'])} priced)"
+        payout = f" · if all hit: {price} → $10 pays ${wk['payout_10']:,.2f}{note}"
+    st.caption(f"{wk['date']} · funded by {wk['funder']} · {verdict}{payout}")
 
     legs_tbl = wk["legs"].rename(columns={
         "submitter": "Member", "leg": "Leg", "bet_type": "Type",
-        "result": "Result", "outcome": "Outcome",
+        "odds": "Odds", "result": "Result", "outcome": "Outcome",
     })
     legs_tbl["Type"] = legs_tbl["Type"].map({"game_line": "Game line", "prop": "Prop"}).fillna(legs_tbl["Type"])
+    legs_tbl["Odds"] = legs_tbl["Odds"].map(logic.fmt_odds)
+    legs_tbl = legs_tbl[["Member", "Leg", "Type", "Odds", "Result", "Outcome"]]
     st.dataframe(
         legs_tbl.style.map(color_result, subset=["Result"]),
         width="stretch", hide_index=True,
@@ -233,6 +240,22 @@ with right:
         )
     else:
         st.info("No legs logged yet.")
+
+
+# ---- chalk vs longshots ----
+st.markdown('<div class="section-title">Chalk vs longshots</div>', unsafe_allow_html=True)
+st.caption("Average implied win probability of each member's legs, from the odds. Higher means safer favorites; lower means bigger swings.")
+chalk = logic.chalk_ranking(legs, members)
+if len(chalk):
+    top, bot = chalk.iloc[0], chalk.iloc[-1]
+    st.caption(f"Chalkiest: {top['Member']} ({top['Avg implied']:.0%}) · biggest gambler: {bot['Member']} ({bot['Avg implied']:.0%})")
+    st.dataframe(
+        chalk.style.format({"Avg implied": "{:.0%}"})
+        .background_gradient(subset=["Avg implied"], cmap="Blues", vmin=0.3, vmax=0.8),
+        width="stretch", hide_index=True,
+    )
+else:
+    st.info("Add odds to the legs and the chalk-vs-longshots ranking appears here.")
 
 
 # ---- parlay history ----

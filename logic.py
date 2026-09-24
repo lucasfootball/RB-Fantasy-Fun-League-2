@@ -10,6 +10,7 @@ Data contract (legs.csv), one row per leg per week:
     submitter  display handle of the member who picked the leg
     leg        free-text description of the bet
     bet_type   game_line | prop
+    odds       American odds for the leg, e.g. -110 or +140 (optional)
     result     W | L | Push
     outcome    optional free-text: the actual result, for the record
 
@@ -28,7 +29,7 @@ VALID_RESULTS = {RESULT_WIN, RESULT_LOSS, RESULT_PUSH}
 VALID_BET_TYPES = {"game_line", "prop"}
 
 LEDGER_COLUMNS = [
-    "week", "date", "funder", "submitter", "leg", "bet_type", "result", "outcome"
+    "week", "date", "funder", "submitter", "leg", "bet_type", "odds", "result", "outcome"
 ]
 
 
@@ -63,6 +64,8 @@ def load_legs(path="legs.csv"):
     # Single letters lose their case above (W -> W, L -> L already fine).
     df["result"] = df["result"].replace({"W": "W", "L": "L", "Push": "Push"})
     df["bet_type"] = df["bet_type"].str.lower().str.replace(" ", "_")
+    odds_raw = df["odds"].fillna("").astype(str).str.replace("+", "", regex=False).str.strip()
+    df["odds"] = pd.to_numeric(odds_raw, errors="coerce").astype("Int64")
     return df.sort_values(["week"]).reset_index(drop=True)
 
 
@@ -80,6 +83,37 @@ def _wlp(sub):
 def _hit_rate(w, l):
     denom = w + l
     return (w / denom) if denom else None
+
+
+def implied_prob(odds):
+    """American odds -> implied win probability (0-1). None for missing."""
+    if odds is None or pd.isna(odds):
+        return None
+    o = int(odds)
+    return (-o) / (-o + 100) if o < 0 else 100 / (o + 100)
+
+
+def decimal_odds(odds):
+    """American odds -> decimal multiplier. None for missing."""
+    if odds is None or pd.isna(odds):
+        return None
+    o = int(odds)
+    return 1 + (o / 100 if o > 0 else 100 / -o)
+
+
+def american_from_prob(p):
+    """Implied probability (0-1) -> representative American odds (int)."""
+    if p is None or pd.isna(p) or p <= 0 or p >= 1:
+        return None
+    return round(-100 * p / (1 - p)) if p >= 0.5 else round(100 * (1 - p) / p)
+
+
+def fmt_odds(odds):
+    """American odds as a signed string, e.g. -110 or +140."""
+    if odds is None or pd.isna(odds):
+        return "-"
+    o = int(odds)
+    return f"+{o}" if o > 0 else str(o)
 
 
 def _streaks(results):
@@ -192,6 +226,33 @@ def bet_type_split(legs):
     return pd.DataFrame(rows).sort_values("Bet type").reset_index(drop=True)
 
 
+def chalk_ranking(legs, members):
+    """Per member, average implied win probability of their legs (needs odds).
+    Higher = chalkier (safe favorites); lower = longshots. Easiest first."""
+    cols = ["Member", "Priced legs", "Avg implied", "Typical line"]
+    if is_empty(legs):
+        return pd.DataFrame(columns=cols)
+    rows = []
+    for _, m in members.iterrows():
+        name = m["display"]
+        sub = legs[legs["submitter"] == name]
+        probs = [implied_prob(o) for o in sub["odds"] if not pd.isna(o)]
+        if not probs:
+            continue
+        avg = sum(probs) / len(probs)
+        rows.append({
+            "Member": name,
+            "Priced legs": len(probs),
+            "Avg implied": avg,
+            "Typical line": fmt_odds(american_from_prob(avg)),
+        })
+    if not rows:
+        return pd.DataFrame(columns=cols)
+    return (pd.DataFrame(rows)
+            .sort_values("Avg implied", ascending=False)
+            .reset_index(drop=True))
+
+
 def season_summary(legs):
     """Headline numbers for the metrics row."""
     hist = parlay_history(legs)
@@ -221,13 +282,22 @@ def week_detail(legs, wk):
         return None
     w, l, p = _wlp(sub)
     status = "Cashed" if l == 0 else ("Near miss" if l == 1 else "Missed")
+    priced = [decimal_odds(o) for o in sub["odds"] if not pd.isna(o)]
+    combined = 1.0
+    for d in priced:
+        combined *= d
+    payout_10 = round(10 * combined, 2) if priced else None
+    price_american = american_from_prob(1 / combined) if priced and combined > 1 else None
     return {
         "week": int(wk),
         "date": sub["date"].iloc[0],
         "funder": sub["funder"].iloc[0],
         "status": status,
         "W": w, "L": l, "Push": p,
-        "legs": sub[["submitter", "leg", "bet_type", "result", "outcome"]],
+        "legs_priced": len(priced),
+        "payout_10": payout_10,
+        "price_american": price_american,
+        "legs": sub[["submitter", "leg", "bet_type", "odds", "result", "outcome"]],
     }
 
 

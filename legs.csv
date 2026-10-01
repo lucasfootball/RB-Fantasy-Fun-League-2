@@ -19,3 +19,13 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 2,2026-09-20,Matt,David B.,Lions/Bills over 54.5,game_line,-110,W,72 total points
 2,2026-09-20,Matt,Adam,Eagles -6.5,game_line,-130,L,Eagles 24 Titans 20 won by 4
 2,2026-09-20,Matt,Jacob,Buccaneers -7.5,game_line,-120,L,Browns 23 Buccaneers 19
+3,2026-09-27,Jacob,Lucas,Seahawks -7.5,game_line,-105,L,Commanders 33 Seahawks 31
+3,2026-09-27,Jacob,Robert,Panthers -2.5,game_line,-115,L,Browns 21 Panthers 18
+3,2026-09-27,Jacob,EJ,Bengals ML,game_line,-190,L,Steelers 30 Bengals 27
+3,2026-09-27,Jacob,Jacob,Derrick Henry over 80 rush yds,prop,-180,W,89 rush yds
+3,2026-09-27,Jacob,Adam,Raiders/Saints over 42.5,game_line,-140,W,62 total points
+3,2026-09-27,Jacob,David B.,CeeDee Lamb over 6.5 receptions,prop,-128,W,7 receptions
+3,2026-09-27,Jacob,David S.,Ravens ML,game_line,-178,W,Ravens 34 Cowboys 31
+3,2026-09-27,Jacob,Matt,Brock Purdy over 225 pass yds,prop,-158,W,297 pass yds
+3,2026-09-27,Jacob,Ryan,49ers -8.5,game_line,-115,L,49ers 36 Cardinals 30 won by 6
+3,2026-09-27,Jacob,Ben,Missouri +6.5,game_line,-114,L,Mississippi State 31 Missouri 24

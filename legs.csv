@@ -9,3 +9,13 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 1,2026-09-13,Ryan,Ben,Austin Simmons over 229.5 pass yds,prop,-115,W,
 1,2026-09-13,Ryan,Matt,Missouri ML,game_line,-205,W,
 1,2026-09-13,Ryan,EJ,Raiders ML,game_line,-180,W,
+2,2026-09-20,Matt,David S.,Chiefs -6.5,game_line,-115,L,Chiefs 33 Colts 30 won by 3
+2,2026-09-20,Matt,EJ,Panthers ML,game_line,-142,W,Panthers 34 Falcons 3
+2,2026-09-20,Matt,Ryan,Vikings/Bears under 47.5,game_line,-102,W,12 total points
+2,2026-09-20,Matt,Lucas,James Cook anytime TD,prop,-125,W,scored
+2,2026-09-20,Matt,Robert,Jaguars ML,game_line,+126,L,Broncos 20 Jaguars 13
+2,2026-09-20,Matt,Ben,D.J. Moore over 63.5 rec yds,prop,-110,Push,left injured early
+2,2026-09-20,Matt,Matt,Bengals ML,game_line,+118,W,Bengals 20 Texans 6
+2,2026-09-20,Matt,David B.,Lions/Bills over 54.5,game_line,-110,W,72 total points
+2,2026-09-20,Matt,Adam,Eagles -6.5,game_line,-130,L,Eagles 24 Titans 20 won by 4
+2,2026-09-20,Matt,Jacob,Buccaneers -7.5,game_line,-120,L,Browns 23 Buccaneers 19

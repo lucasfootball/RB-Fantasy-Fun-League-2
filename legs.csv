@@ -1,14 +1,14 @@
 week,date,funder,submitter,leg,bet_type,odds,result,outcome
-1,2026-09-13,Ryan,Ryan,Browns +8.5,game_line,-108,L,
-1,2026-09-13,Ryan,Robert,Eagles -5.5,game_line,-110,L,
-1,2026-09-13,Ryan,Jacob,Lions -6.5,game_line,-122,L,
-1,2026-09-13,Ryan,David S.,Steelers -5.5,game_line,-115,W,
-1,2026-09-13,Ryan,Lucas,Chase Brown anytime TD,prop,-130,W,
-1,2026-09-13,Ryan,David B.,Bears -3,game_line,-115,W,
-1,2026-09-13,Ryan,Adam,Cardinals +14.5,game_line,-235,W,
-1,2026-09-13,Ryan,Ben,Austin Simmons over 229.5 pass yds,prop,-115,W,
-1,2026-09-13,Ryan,Matt,Missouri ML,game_line,-205,W,
-1,2026-09-13,Ryan,EJ,Raiders ML,game_line,-180,W,
+1,2026-09-13,Ryan,Ryan,Browns +8.5,game_line,-108,L,Jags 34 Browns 10
+1,2026-09-13,Ryan,Robert,Eagles -5.5,game_line,-110,L,Eagles 24 Commanders 22 won by 2
+1,2026-09-13,Ryan,Jacob,Lions -6.5,game_line,-122,L,Lions 31 Saints 30 won by 1
+1,2026-09-13,Ryan,David S.,Steelers -5.5,game_line,-115,W,Steelers 20 Falcons 13
+1,2026-09-13,Ryan,Lucas,Chase Brown anytime TD,prop,-130,W,touchdown scored
+1,2026-09-13,Ryan,David B.,Bears -3,game_line,-115,W,Bears 59 Panthers 37
+1,2026-09-13,Ryan,Adam,Cardinals +14.5,game_line,-235,W,Cardinals 26 Chargers 14
+1,2026-09-13,Ryan,Ben,Austin Simmons over 229.5 pass yds,prop,-115,W,292 pass yds
+1,2026-09-13,Ryan,Matt,Missouri ML,game_line,-205,W,Missouri 38 Kansas 21
+1,2026-09-13,Ryan,EJ,Raiders ML,game_line,-180,W,Raiders 27 Dolphins 13
 2,2026-09-20,Matt,David S.,Chiefs -6.5,game_line,-115,L,Chiefs 33 Colts 30 won by 3
 2,2026-09-20,Matt,EJ,Panthers ML,game_line,-142,W,Panthers 34 Falcons 3
 2,2026-09-20,Matt,Ryan,Vikings/Bears under 47.5,game_line,-102,W,12 total points

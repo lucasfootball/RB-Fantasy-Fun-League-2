@@ -29,3 +29,13 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 3,2026-09-27,Jacob,Matt,Brock Purdy over 225 pass yds,prop,-158,W,297 pass yds
 3,2026-09-27,Jacob,Ryan,49ers -8.5,game_line,-115,L,49ers 36 Cardinals 30 won by 6
 3,2026-09-27,Jacob,Ben,Missouri +6.5,game_line,-114,L,Mississippi State 31 Missouri 24
+4,2026-10-04,Matt,Lucas,Tyler Warren anytime TD,prop,+140,L,did not score
+4,2026-10-04,Matt,EJ,Colts ML,game_line,-203,W,Colts 30 Commanders 13
+4,2026-10-04,Matt,Ben,Missouri +5.5,game_line,-115,W,Missouri 45 Florida 17
+4,2026-10-04,Matt,Ryan,Colston Loveland anytime TD,prop,+240,L,did not score
+4,2026-10-04,Matt,Adam,Packers/Buccaneers over 38.5,game_line,-115,L,31 total points
+4,2026-10-04,Matt,Robert,Broncos +2.5,game_line,-102,L,49ers 24 Broncos 14
+4,2026-10-04,Matt,Jacob,Ravens -11.5,game_line,-110,L,Ravens 24 Titans 18 won by 6
+4,2026-10-04,Matt,David S.,Patriots +6.5,game_line,+100,W,Patriots 29 Bills 26
+4,2026-10-04,Matt,David B.,Lions over 13.5 1st half points,game_line,-136,W,16 points in 1H
+4,2026-10-04,Matt,Matt,Sam Darnold over 225 pass yds,prop,-146,L,168 pass yds

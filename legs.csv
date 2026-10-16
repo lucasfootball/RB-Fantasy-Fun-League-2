@@ -39,3 +39,13 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 4,2026-10-04,Matt,David S.,Patriots +6.5,game_line,+100,W,Patriots 29 Bills 26
 4,2026-10-04,Matt,David B.,Lions over 13.5 1st half points,game_line,-136,W,16 points in 1H
 4,2026-10-04,Matt,Matt,Sam Darnold over 225 pass yds,prop,-146,L,168 pass yds
+5,2026-10-11,Ben,David S.,Jaguars -6.5,game_line,-150,L,Jaguars 19 Eagles 17 won by 2
+5,2026-10-11,Ben,Lucas,Texans/Titans over 37.5,game_line,-118,L,29 total points
+5,2026-10-11,Ben,Robert,Giants +3.5,game_line,-105,W,Giants 27 Commanders 27
+5,2026-10-11,Ben,Ryan,Steelers ML,game_line,-134,W,Steelers 34 Colts 22
+5,2026-10-11,Ben,Jacob,Kyren Williams over 19.5 rec yds,prop,-114,W,27 rec yds
+5,2026-10-11,Ben,EJ,Packers ML,game_line,+106,W,Packers 31 Bears 7
+5,2026-10-11,Ben,Ben,Missouri -3.5,game_line,-106,W,Missouri 27 Texas A&M 6
+5,2026-10-11,Ben,Adam,49ers +7.5,game_line,-265,W,49ers 32 Seahawks 29
+5,2026-10-11,Ben,Matt,Broncos -2.5,game_line,-154,W,Broncos 23 Chargers 17
+5,2026-10-11,Ben,David B.,Malik Nabers 5+ receptions,prop,-138,W,11 receptions

@@ -49,3 +49,13 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 5,2026-10-11,Ben,Adam,49ers +7.5,game_line,-265,W,49ers 32 Seahawks 29
 5,2026-10-11,Ben,Matt,Broncos -2.5,game_line,-154,W,Broncos 23 Chargers 17
 5,2026-10-11,Ben,David B.,Malik Nabers 5+ receptions,prop,-138,W,11 receptions
+6,2026-10-18,Robert,Ben,Missouri +6.5,game_line,-118,L,Ole Miss 31 Missouri 3
+6,2026-10-18,Robert,David S.,Patriots -7.5,game_line,-102,L,Patriots 26 Jets 19 won by 7
+6,2026-10-18,Robert,Lucas,Raiders +7.5,game_line,-188,W,Bills 33 Raiders 30
+6,2026-10-18,Robert,Robert,Steelers -2.5,game_line,-115,W,Steelers 26 Buccaneers 19
+6,2026-10-18,Robert,Ryan,Bills/Raiders under 53.5,game_line,-110,L,63 total points
+6,2026-10-18,Robert,Jacob,Jaylen Warren over 3.5 receptions,prop,-114,L,2 receptions
+6,2026-10-18,Robert,David B.,Seahawks/Broncos under 40.5,game_line,-105,W,31 total points
+6,2026-10-18,Robert,Matt,Panthers ML,game_line,-180,W,Panthers 25 Eagles 14
+6,2026-10-18,Robert,EJ,Jaxon Smith-Njigba 7+ receptions,prop,-146,W,12 receptions
+6,2026-10-18,Robert,Adam,Jaguars ML,game_line,-142,L,Texans 34 Jaguars 31

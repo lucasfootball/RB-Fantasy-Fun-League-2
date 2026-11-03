@@ -59,3 +59,23 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 6,2026-10-18,Robert,Matt,Panthers ML,game_line,-180,W,Panthers 25 Eagles 14
 6,2026-10-18,Robert,EJ,Jaxon Smith-Njigba 7+ receptions,prop,-146,W,12 receptions
 6,2026-10-18,Robert,Adam,Jaguars ML,game_line,-142,L,Texans 34 Jaguars 31
+7,2026-10-25,Matt,Adam,Chiefs ML,game_line,+122,L,Seahawks 20 Chiefs 3
+7,2026-10-25,Matt,EJ,Rams -2.5,game_line,-166,W,Rams 35 Raiders 21
+7,2026-10-25,Matt,Robert,Browns -1.5,game_line,-112,W,Browns 27 Titans 24
+7,2026-10-25,Matt,Lucas,Amon-Ra St. Brown anytime TD,prop,-135,L,no TD
+7,2026-10-25,Matt,David S.,Caleb Williams over 250 pass yds,prop,+225,W,308 pass yds
+7,2026-10-25,Matt,Ryan,Bengals ML,game_line,+102,W,Bengals 35 Ravens 13
+7,2026-10-25,Matt,Jacob,Bryce Young over 253.5 pass yds,prop,-114,L,163 pass yds
+7,2026-10-25,Matt,Matt,Tennessee ML,game_line,+110,L,South Carolina 27 Tennessee 24
+7,2026-10-25,Matt,Ben,Texas -3.5,game_line,-106,W,Texas 34 Ole Miss 27
+7,2026-10-25,Matt,David B.,Ravens over 24.5 points,game_line,-113,L,13 points
+8,2026-11-01,Matt,EJ,Lions ML,game_line,-178,W,Lions 19 Vikings 15
+8,2026-11-01,Matt,Ryan,Buccaneers/Falcons over 44.5,game_line,+108,L,16 total points
+8,2026-11-01,Matt,Adam,Cowboys/Cardinals under 56.5,game_line,-142,L,63 total points
+8,2026-11-01,Matt,David B.,Lamar Jackson over 26.5 rush yds,prop,-113,Push,void injured
+8,2026-11-01,Matt,David S.,Puka Nacua over 7.5 receptions,prop,-140,W,11 receptions
+8,2026-11-01,Matt,Robert,Saquon Barkley anytime TD,prop,+165,W,scored
+8,2026-11-01,Matt,Lucas,Patriots -6.5,game_line,-136,L,Patriots 24 Dolphins 19 won by 5
+8,2026-11-01,Matt,Ben,Travis Kelce over 46.5 rec yds,prop,-113,W,67 rec yds
+8,2026-11-01,Matt,Matt,Aaron Rodgers over 200 pass yds,prop,-168,L,172 pass yds
+8,2026-11-01,Matt,Jacob,Trevor Lawrence over 237.5 pass yds,prop,-113,L,210 pass yds

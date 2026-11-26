@@ -82,8 +82,8 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 9,2026-11-08,Adam,Lucas,Panthers/Broncos under 44.5,game_line,-112,L,47 total points
 9,2026-11-08,Adam,EJ,Rams -3.5,game_line,-127,W,Rams 20 Commanders 13
 9,2026-11-08,Adam,David S.,Giants -3,game_line,-115,W,Giants 19 Eagles 11
-9,2026-11-08,Adam,Robert,Jets +10.5,game_line,-110,L,Chiefs 35 Jets 12
-9,2026-11-08,Adam,Ryan,Chiefs/Jets under 47.5,game_line,-169,W,47 total points
+9,2026-11-08,Adam,Robert,Jets +10.5,game_line,-128,L,Chiefs 35 Jets 12
+9,2026-11-08,Adam,Ryan,Chiefs/Jets under 47.5,game_line,-108,W,47 total points
 9,2026-11-08,Adam,Jacob,Tennessee/Kentucky over 49.5,game_line,-108,L,40 total points
 9,2026-11-08,Adam,Adam,Cardinals +10.5,game_line,-146,L,Seahawks 17 Cardinals 3
 9,2026-11-08,Adam,Matt,Bears -2.5,game_line,-216,W,Bears 27 Buccaneers 24

@@ -79,3 +79,13 @@ week,date,funder,submitter,leg,bet_type,odds,result,outcome
 8,2026-11-01,Matt,Ben,Travis Kelce over 46.5 rec yds,prop,-113,W,67 rec yds
 8,2026-11-01,Matt,Matt,Aaron Rodgers over 200 pass yds,prop,-168,L,172 pass yds
 8,2026-11-01,Matt,Jacob,Trevor Lawrence over 237.5 pass yds,prop,-113,L,210 pass yds
+9,2026-11-08,Adam,Lucas,Panthers/Broncos under 44.5,game_line,-112,L,47 total points
+9,2026-11-08,Adam,EJ,Rams -3.5,game_line,-127,W,Rams 20 Commanders 13
+9,2026-11-08,Adam,David S.,Giants -3,game_line,-115,W,Giants 19 Eagles 11
+9,2026-11-08,Adam,Robert,Jets +10.5,game_line,-110,L,Chiefs 35 Jets 12
+9,2026-11-08,Adam,Ryan,Chiefs/Jets under 47.5,game_line,-169,W,47 total points
+9,2026-11-08,Adam,Jacob,Tennessee/Kentucky over 49.5,game_line,-108,L,40 total points
+9,2026-11-08,Adam,Adam,Cardinals +10.5,game_line,-146,L,Seahawks 17 Cardinals 3
+9,2026-11-08,Adam,Matt,Bears -2.5,game_line,-216,W,Bears 27 Buccaneers 24
+9,2026-11-08,Adam,Ben,Missouri ML,game_line,+120,L,Texas 34 Missouri 20
+9,2026-11-08,Adam,David B.,Johnny Walker ML,game_line,+190,W,KO/TKO vs Cortes-Acosta
